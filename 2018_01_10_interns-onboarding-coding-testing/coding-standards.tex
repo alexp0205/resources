@@ -1,0 +1,81 @@
+\section{Coding Standards}
+
+\begin{frame}[fragile]{Useless Documentation}
+\footnotesize
+\begin{verbatim}
+/**
+* Created by alex on 25/3/16.
+*/
+public class SomeNounDao.java {
+}
+\end{verbatim}
+\begin{verbatim}
+/**
+* Do something after this other thing
+*
+* @param randomObject Random Object
+* @param userId     User Id
+* @return Boolean
+*/
+public Boolean doSomethingAfterThisOtherThing(
+        RandomObject randomObject,
+        String userId) {
+}
+\end{verbatim}
+\normalsize
+\end{frame}
+
+\begin{frame}[fragile]{Better Programming Constructs}
+\begin{itemize}
+	\item Loops considered harmful
+	\item Maps, ForEach, Times, Filters For a Better World
+	\item No more arrayLists or arrays
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{A world without Nulls}
+\footnotesize
+Before
+\begin{verbatim}
+SomeObject k = a.getSomething();
+// Code continues for ever without another usage of a
+\end{verbatim}
+After
+\begin{verbatim}
+SomeObject k;
+if (a != null) {
+    k = a.getSomething();
+}
+// Code continues for ever without another usage of a
+\end{verbatim}
+\normalsize
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Over engineering}
+\begin{itemize}
+	\item Not everything needs to scale (Most things doesn't need to scale).
+	\item Readability vs Scalability
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Tech Debt}
+\begin{itemize}
+	\item Tech Debt is real(Based on true story)
+	\item Less lines of code = Less number of lines which could be buggy
+	\item Style checks
+	\item If without an Else
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Functions Functions Functions}
+\begin{itemize}
+	\item There is a thing called function
+	\item Number of exit points
+	\item \textbf{ Pure functions}
+	\item Functions returns null
+\end{itemize}
+\end{frame}

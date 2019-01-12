@@ -1,0 +1,237 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 26/05/2010
+% edited by Bill Lampos
+%
+% Feel free to use (copy) the structure (latex formatting source code)
+% but not the content of this document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{beamer}
+\usepackage{etex}
+\mode<presentation>
+
+\usetheme{Warsaw}
+% other themes: AnnArbor, Antibes, Bergen, Berkeley, Berlin, Boadilla, boxes, CambridgeUS, Copenhagen, Darmstadt, default, Dresden, Frankfurt, Goettingen,
+% Hannover, Ilmenau, JuanLesPins, Luebeck, Madrid, Maloe, Marburg, Montpellier, PaloAlto, Pittsburg, Rochester, Singapore, Szeged, classic
+
+%\usecolortheme{lily}
+% color themes: albatross, beaver, beetle, crane, default, dolphin, dov, fly, lily, orchid, rose, seagull, seahorse, sidebartab, structure, whale, wolverine
+
+%\usefonttheme{serif}
+% font themes: default, professionalfonts, serif, structurebold, structureitalicserif, structuresmallcapsserif
+
+% pdf is displayed in full screen mode automatically
+%\hypersetup{pdfpagemode=FullScreen}
+
+% define your own colours:
+%\definecolor{Red}{rgb}{1,0,0}
+%\definecolor{Blue}{rgb}{0,0,1}
+%\definecolor{Green}{rgb}{0,1,0}
+%\definecolor{magenta}{rgb}{1,0,.6}
+%\definecolor{lightblue}{rgb}{0,.5,1}
+%\definecolor{lightpurple}{rgb}{.6,.4,1}
+%\definecolor{gold}{rgb}{.6,.5,0}
+%\definecolor{orange}{rgb}{1,0.4,0}
+%\definecolor{hotpink}{rgb}{1,0,0.5}
+%\definecolor{newcolor2}{rgb}{.5,.3,.5}
+%\definecolor{newcolor}{rgb}{0,.3,1}
+%\definecolor{newcolor3}{rgb}{1,0,.35}
+%\definecolor{darkgreen1}{rgb}{0, .35, 0}
+%\definecolor{darkgreen}{rgb}{0, .6, 0}
+%\definecolor{darkred}{rgb}{.75,0,0}
+
+%\xdefinecolor{olive}{cmyk}{0.64,0,0.95,0.4}
+%\xdefinecolor{purpleish}{cmyk}{0.75,0.75,0,0}
+
+% \usepackage{beamerinnertheme_______}
+% inner themes include circles, default, inmargin, rectangles, rounded
+
+%\usepackage{beamerouterthemesmoothbars}
+% outer themes include default, infolines, miniframes, shadow, sidebar, smoothbars, smoothtree, split, tree
+
+%\useoutertheme[subsection=false]{smoothbars}
+
+% to have the same footer on all slides
+%\setbeamertemplate{footline}[text line]{xxx xxx xxx}
+%\setbeamertemplate{footline}[text line]{} % or empty footer
+
+% include packages
+\usepackage{verbatim}
+
+\title{SCALA pour Java(script) Programmers}
+\subtitle{}
+\author{Alex Poovathingal}
+\institute{Gozefo.com}
+\date{\today}
+
+\begin{document}
+
+\frame{
+	\titlepage
+}
+
+\section{Introduction}
+\frame{\frametitle{Introduction}
+\begin{itemize}
+  \item SCALA - Standardisation du Code \'A LA pour Java(script) Programmeurs
+\end{itemize}
+\begin{flushleft}
+\fbox{\parbox{1\textwidth}{% or whatever
+Disclaimer - This talk contains unsolicited advice on programming standards*.
+The author does not claim to have followed these all his life and shall
+not be held liable for any issuesof whatever nature which may arise as a
+result of following these advices.
+
+* Not Really!!
+}}
+\end{flushleft}
+}
+
+\section{The Main Thing}
+\begin{frame}[fragile]
+\frametitle{Useless Documentation}
+\footnotesize
+\begin{verbatim}
+/**
+* Created by alex on 25/3/16.
+*/
+public class SomeNounDao.java {
+}
+\end{verbatim}\\
+\begin{verbatim}
+/**
+* Do something after this other thing
+*
+* @param randomObject Random Object
+* @param userId     User Id
+* @return Boolean
+*/
+public Boolean doSomethingAfterThisOtherThing(
+        RandomObject randomObject,
+        String userId) {
+}
+\end{verbatim}\\
+\normalsize
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Better Programming Constructs}
+\begin{itemize}
+	\item Loops considered harmful
+	\item Maps, ForEach, Times, Filters For a Better World
+	\item No more arrayLists or arrays
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{A world without Nulls}
+\footnotesize
+Before
+\begin{verbatim}
+SomeObject k = a.getSomething();
+// Code continues for ever without another usage of a
+\end{verbatim}\\
+After
+\begin{verbatim}
+SomeObject k;
+if (a != null) {
+    k = a.getSomething();
+}
+// Code continues for ever without another usage of a
+\end{verbatim}\\
+\normalsize
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Readable Tests}
+\begin{itemize}
+	\item Prerequisite - write tests
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Over engineering}
+\begin{itemize}
+	\item Not everything needs to scale (Most things doesn't need to scale).
+	\item Readability vs Scalability
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Tech Debt}
+\begin{itemize}
+	\item Tech Debt is real(Based on true story)
+	\item Less lines of code = Less number of lines which could be buggy
+	\item Style checks
+	\item If without an Else
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Standardize Namings}
+\begin{itemize}
+	\item pid, whProductId, productId, reference
+	\item Unique ids (Not very sure)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Functions Functions Functions}
+\begin{itemize}
+	\item There is a thing called function
+	\item Number of exit points
+	\item Pure functions
+	\item Functions returns null
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Buddha's Catch}
+\begin{itemize}
+	\item Don't make one which catches everything
+	\item Exceptions face existential crisis - they should exist, they need purpose.
+\end{itemize}
+\end{frame}
+
+\section{Biased Standards}
+
+\begin{frame}[fragile]
+\frametitle{Clean Dao Classes}
+\begin{itemize}
+	\item Bug Free (Citation needed)
+	\item Joins are like callbacks in javascript (I promise, but I don't insist)
+	\item Return full Object instead of fields
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Enum driven programming}
+\begin{itemize}
+	\item To remove magic numbers
+	\item Clean data
+	\item All special rules at one place
+	\item Ability to find all usages
+\end{itemize}
+\end{frame}
+
+\section{Unrelated Unsolicited Rants}
+
+\begin{frame}[fragile]
+\frametitle{Unrelated rants}
+\begin{itemize}
+	\item Language specific to audience - We pay good rent for warehouse. It should be strong enough!
+	\item Production Issue - Seriousness
+\end{itemize}
+\end{frame}
+
+\section{Conclusion}
+
+\section*{}
+\frame{
+    \begin{center}
+        \huge
+        Any more points?
+    \end{center}
+}
+
+\end{document}
